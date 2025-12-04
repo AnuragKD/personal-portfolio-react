@@ -1,3 +1,39 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "BricolageGrotesque";
+  src: url("/src/fonts/BricolageGrotesque-VariableFont.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
 
+
+@theme {
+    
+  --color-primary-color:#19a974;  
+  --color-secondary-color:#19a974;
+
+  --font-primary-font:"BricolageGrotesque";
+
+  --tw-container-max-width: 960px;
+  --tw-container-padding: 2rem;
+
+  --breakpoint-lap: 1600px;
+  --breakpoint-md-lap: 1400px;
+  --breakpoint-sm-lap: 1200px;
+}
+
+/* GLOBAL BASE STYLES */
+@layer base {
+  h1 { @apply text-5xl font-medium text-gray-900 leading-[1.2] font-primary-font; }
+  h2 { @apply text-3xl font-semibold text-gray-900; }
+  p  { @apply text-lg leading-7 text-gray-400; }
+}
+
+/* UTILITY TYPOGRAPHY SYSTEM */
+@layer components {
+  .heading-xl { @apply text-6xl font-extrabold; }
+  .heading-lg { @apply text-4xl font-bold; }
+  .body-md    { @apply text-lg leading-8; }
+  .body-sm    { @apply text-sm leading-6 text-gray-500; }
+}
