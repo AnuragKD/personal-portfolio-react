@@ -10,10 +10,11 @@
 
 @theme {
     
+  --font-primary-font:"BricolageGrotesque";
+  
   --color-primary-color:#19a974;  
   --color-secondary-color:#19a974;
 
-  --font-primary-font:"BricolageGrotesque";
 
   --tw-container-max-width: 960px;
   --tw-container-padding: 2rem;
