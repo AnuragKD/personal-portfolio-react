@@ -7,13 +7,21 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Inter";
+  src: url("/src/fonts/Inter-VariableFont_opsz\,wght.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
 
 @theme {
     
   --font-primary-font:"BricolageGrotesque";
+  --font-secondary-font:"Inter";
   
   --color-primary-color:#19a974;  
   --color-secondary-color:#19a974;
+  --color-border-gray:#e6e6e6;
 
 
   --tw-container-max-width: 960px;
@@ -26,9 +34,9 @@
 
 /* GLOBAL BASE STYLES */
 @layer base {
-  h1 { @apply text-5xl font-medium text-gray-900 leading-[1.2] font-primary-font; }
+  h1 { @apply text-5xl font-medium text-gray-900 leading-[1.2] font-primary-font mb-5; }
   h2 { @apply text-3xl font-semibold text-gray-900; }
-  p  { @apply text-lg leading-7 text-gray-400; }
+  p  { @apply text-lg leading-7 text-gray-400 font-secondary-font;}
 }
 
 /* UTILITY TYPOGRAPHY SYSTEM */
@@ -37,4 +45,8 @@
   .heading-lg { @apply text-4xl font-bold; }
   .body-md    { @apply text-lg leading-8; }
   .body-sm    { @apply text-sm leading-6 text-gray-500; }
+
+  .container {@apply max-w-7xl}
+  .section-border { @apply relative before:absolute before:inset-0 before:border-b-1 before:border-border-gray ;}
+  .container-border { @apply relative before:absolute before:inset-0 before:border-x-1 before:border-border-gray ;}
 }
