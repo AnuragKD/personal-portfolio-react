@@ -1,10 +1,11 @@
 import Standout from "../assets/svgs/banner-illustration.svg?react";
-// import ArrowRight from "@/assets/icons/arrows/arrow-right.svg?react";
+import Separator from "../assets/svgs/separator.svg?react";
+import Logo from "../assets/svgs/logo.svg?react";
 
 const icons = {
   standout: Standout,
-//   instagram: Instagram,
-
+  separator: Separator,
+  logo:Logo,
 };
 
 export default function Icon({ name, className, ...props }) {

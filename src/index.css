@@ -23,6 +23,8 @@
   --color-secondary-color:#19a974;
   --color-border-gray:#e6e6e6;
 
+  --color-main-bg:#F7F7F7;
+
 
   --tw-container-max-width: 960px;
   --tw-container-padding: 2rem;
@@ -37,6 +39,8 @@
   h1 { @apply text-5xl font-medium text-gray-900 leading-[1.2] font-primary-font mb-5; }
   h2 { @apply text-3xl font-semibold text-gray-900; }
   p  { @apply text-lg leading-7 text-gray-400 font-secondary-font;}
+  a  { @apply font-secondary-font ;}
+  button { @apply font-secondary-font ;}
 }
 
 /* UTILITY TYPOGRAPHY SYSTEM */
