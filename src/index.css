@@ -37,8 +37,8 @@
 /* GLOBAL BASE STYLES */
 @layer base {
   h1 { @apply text-5xl font-medium text-gray-900 leading-[1.2] font-primary-font mb-5; }
-  h2 { @apply text-3xl font-semibold text-gray-900; }
-  p  { @apply text-lg leading-7 text-gray-400 font-secondary-font;}
+  h2 { @apply text-3xl font-semibold text-gray-900 mb-5; }
+  p  { @apply text-lg leading-7 text-gray-600 font-secondary-font;}
   a  { @apply font-secondary-font ;}
   button { @apply font-secondary-font ;}
 }
@@ -53,4 +53,5 @@
   .container {@apply max-w-7xl}
   .section-border { @apply relative before:absolute before:inset-0 before:border-b-1 before:border-border-gray ;}
   .container-border { @apply relative before:absolute before:inset-0 before:border-x-1 before:border-border-gray ;}
+
 }

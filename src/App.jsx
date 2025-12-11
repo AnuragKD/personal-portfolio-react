@@ -18,6 +18,7 @@ export default function App(){
         <Router>
           <div className="min-h-screen flex flex-col bg-main-bg">
             <Header/>
+            
             <main className="flex-1">
               <Suspense fallback={<div className="p-8">Loading...</div>}>
                 <Routes>
@@ -32,7 +33,7 @@ export default function App(){
 
             <Footer/>
 
-            <SettingsDrawer />
+            {/* <SettingsDrawer /> */}
           </div>
         </Router>
       </ModeProvider>
