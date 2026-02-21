@@ -1,5 +1,5 @@
 // import SeparatorSVG from "../../assets/svgs/separator.svg";
-import Container from "../layout/container";
+import Container from "../layout/Container";
 import Icon from '../Icon'
 
 export default function Separator({ className = "" }) {
