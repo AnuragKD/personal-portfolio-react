@@ -4,6 +4,9 @@ import Logo from "../assets/svgs/logo.svg?react";
 import MessageProgramming from "../assets/icons/message-programming.svg?react";
 import Linkedin from "../assets/icons/linkedin.svg?react";
 import Github from "../assets/icons/github.svg?react";
+import Experience from "../assets/svgs/experience.svg?react";
+import Project from "../assets/svgs/Project.svg?react";
+import Client from "../assets/svgs/client.svg?react";
 
 const icons = {
 
@@ -16,6 +19,9 @@ const icons = {
   messageprogramming: MessageProgramming,
   linkedin : Linkedin,
   github : Github,
+  experience : Experience,
+  project : Project,
+  client : Client,
 };
 
 export default function Icon({ name, className, ...props }) {

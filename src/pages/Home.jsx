@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react'
+// import React, { Suspense, lazy } from 'react'
 import Banner from '../components/sections/banner'
 import Separator from '../components/element/Separator'
 import About from '../components/sections/About'
@@ -6,7 +6,7 @@ import About from '../components/sections/About'
 // import HeroSimple from '../components/simple/HeroSimple'
 // import { useMode } from '../context/ModeContext'
 
-const Hero3D = lazy(() => import('../components/three/Hero3D'))
+// const Hero3D = lazy(() => import('../components/three/Hero3D'))
 
 export default function Home(){
   // const { mode } = useMode()
