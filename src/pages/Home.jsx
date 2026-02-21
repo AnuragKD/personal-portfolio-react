@@ -1,7 +1,8 @@
 // import React, { Suspense, lazy } from 'react'
-import Banner from '../components/sections/banner'
+// import Banner from '../components/sections/banner'
 import Separator from '../components/element/Separator'
 import About from '../components/sections/About'
+import Banner from '../components/sections/Banner'
 
 // import HeroSimple from '../components/simple/HeroSimple'
 // import { useMode } from '../context/ModeContext'
