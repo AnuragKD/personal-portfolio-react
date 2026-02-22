@@ -6,16 +6,14 @@ import Icon from '../Icon'
 // import Buttonhex from '../ui/Buttonhex'
 // import CvIcon from '../../assets/icons/cv.png'
 import Button from '../ui/Button'
+import Label from '../ui/Label'
 
 const Banner = () => {
   return (
-    <Section className='h-[80dvh] flex items-center'>
+    <Section className='h-fit min-h-[80dvh] flex items-center'>
             <div class="absolute inset-0 z-0 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] bg-size-[16px_16px] mask-[radial-gradient(ellipse_50%_50%_at_50%_50%,#F7F7F7_60%,transparent_100%)]"></div>
-        <Container className='z-1'>
-            <div className='w-fit mx-auto flex gap-2 items-center justify-center mb-5 bg-white px-2 rounded-lg border-2 border-gray-200'>
-              <Icon name="messageprogramming" className="w-4 h-auto" />
-              <p className='font-normal text-sm text-gray-600 '>Developer</p>
-            </div>
+        <Container className='z-1'>            
+            <Label name="messageprogramming">Developer</Label>
             <div className='block text-center'>     
               <h1 className='relative text-center inline z-1'>
                 Crafting Interfaces<br/>With Code & Creativity

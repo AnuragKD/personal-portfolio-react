@@ -22,6 +22,8 @@ export default function Home(){
       <Banner/>
       <Separator/>
       <About/>
+      {/* <Separator/> */}
+      <About/>
     </>
   )
 }
