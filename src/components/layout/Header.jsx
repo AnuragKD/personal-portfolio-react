@@ -16,7 +16,7 @@ export default function Header() {
   return (
     <header className="w-full fixed top-0 z-50">
       <div className="max-w-7xl mx-auto px-5 md:px-10">
-        <nav className=" relative my-3 border-1 border-gray-200 rounded-full py-3 px-4 flex justify-between items-center">
+        <nav className=" relative my-3 border-1 border-gray-200 rounded-full py-2 md:py-3 px-3 md:px-4 flex justify-between items-center">
           <div className="absolute inset-0 backdrop-blur-xl bg-white/10 rounded-full -z-1"></div>
           {/* Logo */}
           <Icon name="logo" className="h-[26px] md:h-[30px] lg:h-[35px] w-auto" />
