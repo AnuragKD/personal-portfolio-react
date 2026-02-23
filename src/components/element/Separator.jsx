@@ -5,8 +5,8 @@ import Icon from '../Icon'
 export default function Separator({ className = "" }) {
   return (
     <div className={`section-border w-full overflow-hidden ${className}`}>
-      <Container className="container-border !p-0">
-        <Icon name="separator" className="w-full"/>
+      <Container className="container-border !p-0 h-[80px]">
+        <Icon name="separator" className="w-auto height-full"/>
       </Container>
     </div>
   );
