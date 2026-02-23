@@ -73,19 +73,19 @@ export default function Header() {
             {/* Mobile Menu */}
             <div
                 className={`lg:hidden absolute -right-1 -top-1 overflow-hidden transition-all duration-300 ${
-                isOpen ? "max-h-96 w-[300px] opacity-100" : "max-h-0 w-0 opacity-0"
+                isOpen ? "max-h-96 w-[240px] opacity-100" : "max-h-0 w-0 opacity-0"
                 }`}
             >
-                <div className="flex flex-col items-end gap-2 p-6 rounded-2xl bg-white border-1 border-gray-200">
+                <div className="flex flex-col items-end gap-2 p-4 pt-13 rounded-[20px] bg-white/70 backdrop-blur-sm border-1 border-gray-200">
                 {navLinks.map((link) => (
                     <NavLink
                     key={link.name}
                     to={link.path}
                     onClick={() => setIsOpen(false)}
                     className={({isActive}) => 
-                        `text-black text-sm px-4 py-2 w-full ${
+                        `text-black text-sm px-4 py-2 w-full rounded-full ${
                             isActive 
-                            ? " bg-primary-color text-white" 
+                            ? " border-1 border-primary-color bg-primary-color/80 text-white" 
                             : " "
                         }`}
                     >
@@ -93,7 +93,10 @@ export default function Header() {
                     </NavLink>
                 ))}
 
-                <Button onClick={() => setIsOpen(false)}>Hire Me</Button>
+                <Button 
+                  onClick={() => setIsOpen(false)}
+                  className="w-full"
+                  >Hire Me</Button>
                 </div>
             </div>
 
