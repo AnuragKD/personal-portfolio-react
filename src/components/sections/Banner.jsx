@@ -11,7 +11,7 @@ import Label from '../ui/Label'
 const Banner = () => {
   return (
     <Section className='h-fit min-h-[80dvh] flex items-center'>
-            <div class="absolute inset-0 z-0 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] bg-size-[16px_16px] mask-[radial-gradient(ellipse_50%_50%_at_50%_50%,#F7F7F7_60%,transparent_100%)]"></div>
+            <div className="absolute inset-0 z-0 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] bg-size-[16px_16px] mask-[radial-gradient(ellipse_50%_50%_at_50%_50%,#F7F7F7_60%,transparent_100%)]"></div>
         <Container className='z-1'>            
             <Label name="messageprogramming">Developer</Label>
             <div className='block text-center'>     
@@ -30,18 +30,17 @@ const Banner = () => {
             </button> */}
 
             {/* grid line */}
-            {/* <div class="min-h-screen bg-[linear-gradient(#e5e7eb_1px,transparent_1px),linear-gradient(90deg,#e5e7eb_1px,transparent_1px)] bg-[size:40px_40px]">
-            </div> */}
+            {/* <div className="absolute inset-0 z-0 h-full w-full bg-[linear-gradient(#e5e7eb_1px,transparent_1px),linear-gradient(90deg,#e5e7eb_1px,transparent_1px)] bg-[size:40px_40px] mask-[radial-gradient(ellipse_50%_50%_at_50%_50%,#F7F7F7_60%,transparent_100%)]"></div> */}
 
             {/* grid dot */}
-            {/* <div class="min-h-screen bg-[radial-gradient(circle,_rgba(0,0,0,0.15)_1px,_transparent_1px)] bg-[length:20px_20px]">
+            {/* <div className="absolute inset-0 z-0 h-full w-full bg-[radial-gradient(circle,_rgba(0,0,0,0.15)_1px,_transparent_1px)] bg-[length:20px_20px]">
             </div> */}
 
             {/* masked dot  */}
-            {/* <div class="h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] bg-size-[16px_16px] mask-[radial-gradient(ellipse_50%_50%_at_50%_50%,#000_60%,transparent_100%)]"
+            {/* <div className="absolute inset-0 z-0 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] bg-size-[16px_16px] mask-[radial-gradient(ellipse_50%_50%_at_50%_50%,#000_60%,transparent_100%)]"
             ></div> */}
 
-            {/* <div class="min-h-screen bg-[linear-gradient(#d4d4d44d_1px,transparent_1px),linear-gradient(90deg,#d4d4d44d_1px,transparent_1px)] bg-[size:60px_60px] backdrop-blur-sm">              
+            {/* <div className="absolute inset-0 z-0 h-full w-full bg-[linear-gradient(#d4d4d44d_1px,transparent_1px),linear-gradient(90deg,#d4d4d44d_1px,transparent_1px)] bg-[size:60px_60px] backdrop-blur-sm">              
             </div> */}
 
 
