@@ -21,9 +21,11 @@
   
   --color-primary-color:#54814F;  
   --color-secondary-color:#19a974;
-  --color-border-gray:#e6e6e6;
+  /* --color-border-gray:#e6e6e6; */
+  --color-border-gray:#87878747;
 
   --color-main-bg:#F7F7F7;
+  --color-black-bg:rgb(27, 27, 27);
 
 
   --tw-container-max-width: 960px;
@@ -57,5 +59,7 @@
   .container {@apply max-w-7xl}
   .section-border { @apply relative before:absolute before:inset-0 before:border-b-1 before:border-border-gray ;}
   .container-border { @apply relative before:absolute before:inset-0 before:border-x-1 before:border-border-gray ;}
-
+}
+.container-border path{
+  @apply stroke-border-gray;  
 }

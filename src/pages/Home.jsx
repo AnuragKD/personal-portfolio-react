@@ -3,6 +3,7 @@
 import Separator from '../components/element/Separator'
 import About from '../components/sections/About'
 import Banner from '../components/sections/Banner'
+import Projects from '../components/sections/Projects'
 
 // import HeroSimple from '../components/simple/HeroSimple'
 // import { useMode } from '../context/ModeContext'
@@ -23,7 +24,8 @@ export default function Home(){
       <Separator/>
       <About/>
       <Separator/>
-      <About/>
+      <Separator className='bg-black-bg'/>
+      <Projects/>
     </>
   )
 }
