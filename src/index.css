@@ -52,7 +52,7 @@
   .heading-lg { @apply text-4xl font-bold; }
   .body-md    { @apply text-lg leading-8; }
   .body-sm    { @apply text-sm leading-6 text-gray-500; }
-  .small-para { @apply text-xs md:text-sm xl:text-base leading-7 tracking-tight text-gray-600 font-secondary-font;}
+  .small-para { @apply text-xs md:text-sm xl:text-base leading-[1.5] tracking-tight text-gray-600 font-secondary-font;}
 
   .container {@apply max-w-7xl}
   .section-border { @apply relative before:absolute before:inset-0 before:border-b-1 before:border-border-gray ;}
