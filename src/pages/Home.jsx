@@ -1,31 +1,24 @@
-// import React, { Suspense, lazy } from 'react'
-// import Banner from '../components/sections/banner'
 import Separator from '../components/element/Separator'
-import About from '../components/sections/About'
 import Banner from '../components/sections/Banner'
+import About from '../components/sections/About'
+import Experience from '../components/sections/Experience'
 import Projects from '../components/sections/Projects'
-
-// import HeroSimple from '../components/simple/HeroSimple'
-// import { useMode } from '../context/ModeContext'
-
-// const Hero3D = lazy(() => import('../components/three/Hero3D'))
+import Skills from '../components/sections/Skills'
+import ContactForm from '../components/sections/ContactForm'
 
 export default function Home(){
-  // const { mode } = useMode()
   return (
     <>
-      {/* {mode === 'simple' ? <HeroSimple /> :
-        <Suspense fallback={<div className="h-screen flex items-center justify-center">Loading 3D...</div>}>
-          <Hero3D />
-        </Suspense>
-      } */}
-      <Separator/>
       <Banner/>
       <Separator/>
       <About/>
       <Separator/>
+      <Experience/>
       <Separator className='bg-black-bg'/>
       <Projects/>
+      <Skills/>
+      <Separator/>
+      <ContactForm/>
     </>
   )
 }

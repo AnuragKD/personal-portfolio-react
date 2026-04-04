@@ -63,3 +63,87 @@
 .container-border path{
   @apply stroke-border-gray;  
 }
+
+/* =====================================================
+   SPLASH SCREEN
+   ===================================================== */
+
+@keyframes splash-bar {
+  0%   { width: 0%; }
+  40%  { width: 55%; }
+  70%  { width: 80%; }
+  90%  { width: 95%; }
+  100% { width: 100%; }
+}
+
+@keyframes splash-logo-in {
+  0%   { opacity: 0; transform: translateY(20px) scale(0.96); }
+  100% { opacity: 1; transform: translateY(0px)  scale(1); }
+}
+
+@keyframes splash-dot-pulse {
+  0%, 100% { opacity: 0.3; transform: scale(0.8); }
+  50%       { opacity: 1;   transform: scale(1.2); }
+}
+
+@keyframes splash-exit {
+  0%   { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-8px); }
+}
+
+.splash-logo-in {
+  animation: splash-logo-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.splash-bar {
+  animation: splash-bar 1.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+.splash-dot {
+  animation: splash-dot-pulse 1.2s ease-in-out infinite;
+}
+.splash-exit {
+  animation: splash-exit 0.5s cubic-bezier(0.4, 0, 1, 1) forwards;
+}
+
+/* =====================================================
+   SCROLL-ENTRY ANIMATIONS
+   ===================================================== */
+@keyframes fade-up {
+  0%   { opacity: 0; transform: translateY(32px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-down {
+  0%   { opacity: 0; transform: translateY(-24px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-left {
+  0%   { opacity: 0; transform: translateX(40px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fade-right {
+  0%   { opacity: 0; transform: translateX(-40px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scale-up {
+  0%   { opacity: 0; transform: scale(0.88); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes blur-in {
+  0%   { opacity: 0; filter: blur(12px); transform: translateY(16px); }
+  100% { opacity: 1; filter: blur(0px);  transform: translateY(0); }
+}
+
+/* animation utility classes */
+.anim-fade-up    { animation: fade-up    var(--anim-dur,0.65s) var(--anim-ease,cubic-bezier(0.22,1,0.36,1)) var(--anim-delay,0ms) both; }
+.anim-fade-down  { animation: fade-down  var(--anim-dur,0.65s) var(--anim-ease,cubic-bezier(0.22,1,0.36,1)) var(--anim-delay,0ms) both; }
+.anim-fade-left  { animation: fade-left  var(--anim-dur,0.65s) var(--anim-ease,cubic-bezier(0.22,1,0.36,1)) var(--anim-delay,0ms) both; }
+.anim-fade-right { animation: fade-right var(--anim-dur,0.65s) var(--anim-ease,cubic-bezier(0.22,1,0.36,1)) var(--anim-delay,0ms) both; }
+.anim-scale-up   { animation: scale-up   var(--anim-dur,0.65s) var(--anim-ease,cubic-bezier(0.22,1,0.36,1)) var(--anim-delay,0ms) both; }
+.anim-blur-in    { animation: blur-in    var(--anim-dur,0.75s) var(--anim-ease,cubic-bezier(0.22,1,0.36,1)) var(--anim-delay,0ms) both; }
+
+/* hidden state — applied before element enters view */
+.anim-hidden { opacity: 0; }
