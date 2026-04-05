@@ -2,79 +2,76 @@ import Container from '../layout/Container'
 import Section from '../layout/Section'
 import SectionBorder from '../element/Sectionborder'
 import Label from '../ui/Label'
-import Card from '../ui/Card'
 import AnimateIn from '../element/AnimateIn'
 import skills from '../../data/skills'
 
-const categoryColors = {
-  Frontend: {
-    border: 'border-green-500/25', bg: 'bg-green-500/5',
-    badge: 'bg-green-500/10 text-green-300 border-green-500/20',
-    dot: 'bg-green-400', label: 'text-green-400',
-  },
-  Backend: {
-    border: 'border-blue-500/25', bg: 'bg-blue-500/5',
-    badge: 'bg-blue-500/10 text-blue-300 border-blue-500/20',
-    dot: 'bg-blue-400', label: 'text-blue-400',
-  },
-  Tools: {
-    border: 'border-amber-500/25', bg: 'bg-amber-500/5',
-    badge: 'bg-amber-500/10 text-amber-300 border-amber-500/20',
-    dot: 'bg-amber-400', label: 'text-amber-400',
-  },
-}
-
-const SkillCard = ({ skill, index }) => {
-  const colors = categoryColors[skill.category] || categoryColors.Tools
+const MarqueeRow = ({ items, reverse = false, speed = 40 }) => {
+  // duplicate items to ensure infinite seamless scrolling
+  const duplicatedItems = [...items, ...items, ...items, ...items, ...items, ...items, ...items, ...items]
+  
   return (
-    <AnimateIn variant="fade-up" delay={index * 120} duration={700}>
-      <Card
-        variant="outline"
-        hover={true}
-        className={`flex flex-col gap-4 p-5 h-full ${colors.border} ${colors.bg} hover:shadow-lg hover:shadow-black/20 hover:-translate-y-1`}
+    <div className="relative flex overflow-hidden w-full select-none group mask-image-fade">
+      <div 
+        className={`flex w-max shrink-0 items-center justify-center gap-4 py-3 ${reverse ? 'animate-marquee-right' : 'animate-marquee-left'}`}
+        style={{ animationDuration: `${speed}s` }}
       >
-        <div className="flex items-center gap-2">
-          <span className={`w-2 h-2 rounded-full ${colors.dot}`} />
-          <h4 className={`font-semibold text-xs uppercase tracking-widest ${colors.label} font-[Inter]`}>
-            {skill.category}
-          </h4>
-        </div>
-        <div className="flex flex-wrap gap-2">
-          {skill.items.map((item) => (
-            <span
-              key={item.name}
-              className={`flex items-center gap-1.5 text-sm px-3 py-1.5 rounded-full border ${colors.badge} transition-transform duration-200 hover:scale-105 cursor-default font-[Inter]`}
-            >
-              <span className="text-base leading-none">{item.icon}</span>
-              {item.name}
-            </span>
-          ))}
-        </div>
-      </Card>
-    </AnimateIn>
+        {duplicatedItems.map((item, i) => (
+          <div key={`${item.name}-${i}`} className="group/card flex items-center gap-2.5 px-6 py-3 rounded-full border border-gray-200 bg-white/60 backdrop-blur-md text-gray-700 shadow-sm transition-all duration-300 hover:border-primary-color hover:text-primary-color hover:-translate-y-1 hover:shadow-md cursor-default">
+            <span className="text-xl leading-none grayscale transition-all duration-300 group-hover/card:grayscale-0">{item.icon}</span>
+            <span className="font-[Inter] font-medium whitespace-nowrap">{item.name}</span>
+          </div>
+        ))}
+      </div>
+    </div>
   )
 }
 
 const Skills = () => {
+  const frontendSkills = skills.find(s => s.category === 'Frontend')?.items || []
+  const backendSkills = skills.find(s => s.category === 'Backend')?.items || []
+  const toolSkills = skills.find(s => s.category === 'Tools')?.items || []
+
+  // Combine backend and tools into the second row to balance sizes
+  const row2Skills = [...backendSkills, ...toolSkills]
+
   return (
-    <Section id="skills" className="h-fit flex items-center bg-black-bg">
-      <Container className="z-1 w-full py-16">
+    <Section id="skills" className="h-fit flex items-center overflow-hidden">
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 z-0 h-full w-full
+          bg-[linear-gradient(#e5e7eb_1px,transparent_1px),linear-gradient(90deg,#e5e7eb_1px,transparent_1px)]
+          bg-[size:40px_40px]"
+        style={{
+          WebkitMaskImage: 'radial-gradient(ellipse 60% 60% at 50% 50%, #000 40%, transparent 100%)',
+          maskImage: 'radial-gradient(ellipse 60% 60% at 50% 50%, #000 40%, transparent 100%)'
+        }}
+      />
+      <Container className="z-1 w-full py-20 pb-28">
         <AnimateIn variant="fade-down" delay={0} duration={600}>
-          <Label name="messageprogramming">Skills</Label>
+          <div className="flex justify-center">
+            <Label name="messageprogramming" className="!mx-0">Skills</Label>
+          </div>
         </AnimateIn>
+        
         <AnimateIn variant="blur-in" delay={80} duration={700}>
-          <h2 className="text-white text-center mb-3">What I Work With</h2>
+          <h2 className="text-gray-900 text-center mb-4">Core Technologies</h2>
         </AnimateIn>
+        
         <AnimateIn variant="fade-up" delay={160} duration={600}>
-          <p className="text-white/50 text-center max-w-xl mx-auto mb-12 text-sm leading-relaxed font-[Inter]">
-            Technologies and tools I use to build fast, accessible, and beautiful digital experiences.
+          <p className="text-gray-500 text-center max-w-xl mx-auto mb-16 text-sm md:text-base leading-relaxed font-[Inter]">
+            The tools and frameworks I use to engineer robust, high-performance web applications and beautiful digital experiences.
           </p>
         </AnimateIn>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          {skills.map((skill, index) => (
-            <SkillCard key={skill.category} skill={skill} index={index} />
-          ))}
+        {/* Break out of container to span full viewport width using 100vw trick */}
+        <div className="flex flex-col gap-6 relative">
+          <AnimateIn variant="fade-left" delay={300} duration={800} className="w-full">
+            <MarqueeRow items={frontendSkills} speed={55} />
+          </AnimateIn>
+          
+          <AnimateIn variant="fade-right" delay={400} duration={800} className="w-full">
+            <MarqueeRow items={row2Skills} reverse={true} speed={60} />
+          </AnimateIn>
         </div>
       </Container>
       <SectionBorder />

@@ -2,32 +2,32 @@ const skills = [
   {
     category: "Frontend",
     items: [
-      { name: "React", icon: "⚛️" },
+      { name: "React.js", icon: "⚛️" },
+      { name: "Next.js", icon: "▲" },
       { name: "JavaScript", icon: "🟨" },
-      { name: "TypeScript", icon: "🔷" },
-      { name: "HTML5", icon: "🔶" },
-      { name: "CSS3", icon: "🎨" },
+      { name: "HTML5/CSS3", icon: "🎨" },
       { name: "Tailwind CSS", icon: "💨" },
-      { name: "Three.js", icon: "🔺" },
+      { name: "Bootstrap", icon: "🅱️" },
+      { name: "SCSS", icon: "💅" },
+      { name: "GSAP / Framer Motion", icon: "✨" },
     ],
   },
   {
     category: "Backend",
     items: [
       { name: "Node.js", icon: "🟢" },
-      { name: "Express.js", icon: "🚀" },
-      { name: "REST APIs", icon: "🔗" },
       { name: "MongoDB", icon: "🍃" },
+      { name: "REST APIs", icon: "🔗" },
+      { name: "GraphQL", icon: "🕸️" },
     ],
   },
   {
     category: "Tools",
     items: [
-      { name: "Git", icon: "🐙" },
-      { name: "GitHub", icon: "⚡" },
-      { name: "Vite", icon: "⚡" },
+      { name: "Git & GitHub", icon: "🐙" },
       { name: "Figma", icon: "🎨" },
-      { name: "VS Code", icon: "💻" },
+      { name: "Chrome DevTools", icon: "🛠️" },
+      { name: "Debugging", icon: "🐛" },
     ],
   },
 ];

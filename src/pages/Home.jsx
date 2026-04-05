@@ -9,14 +9,15 @@ import ContactForm from '../components/sections/ContactForm'
 export default function Home(){
   return (
     <>
+      {/* <Separator/> */}
       <Banner/>
       <Separator/>
       <About/>
       <Separator/>
-      <Experience/>
-      <Separator className='bg-black-bg'/>
-      <Projects/>
       <Skills/>
+      <Separator/>
+      <Projects/>
+      <Experience/>
       <Separator/>
       <ContactForm/>
     </>

@@ -88,13 +88,18 @@ const ContactForm = () => {
   }
 
   return (
-    <Section id="contact" className="h-fit flex items-center">
-      <Container className="z-1 w-full py-16">
-        <AnimateIn variant="fade-down" delay={0} duration={600}>
-          <Label name="messageprogramming">Contact</Label>
+    <Section id="contact" className="h-fit flex items-center relative overflow-hidden">
+      
+      {/* Decorative Background Orbs */}
+      <div className="absolute -bottom-[20%] -left-[10%] w-[50%] h-[60%] rounded-full bg-primary-color/5 blur-[120px] pointer-events-none z-0" />
+      <div className="absolute top-[10%] -right-[10%] w-[30%] h-[30%] rounded-full bg-primary-color/5 blur-[100px] pointer-events-none z-0 opacity-80" />
+
+      <Container className="relative z-10 w-full py-16">
+        <AnimateIn variant="fade-down" delay={0} duration={600} className="flex justify-center">
+          <Label name="messageprogramming" className="!mx-0">Contact</Label>
         </AnimateIn>
         <AnimateIn variant="blur-in" delay={80} duration={700}>
-          <h2 className="text-gray-900 text-center mb-3">Get In Touch</h2>
+          <h2 className="text-gray-900 text-center mb-3 mt-1">Get In Touch</h2>
         </AnimateIn>
         <AnimateIn variant="fade-up" delay={160} duration={600}>
           <p className="text-gray-500 text-center max-w-xl mx-auto mb-14 text-sm leading-relaxed font-[Inter]">
@@ -109,6 +114,9 @@ const ContactForm = () => {
               <h4 className="text-gray-900 mb-2">Let's work together</h4>
               <p className="text-sm text-gray-500 leading-relaxed font-[Inter]">
                 I'm open to freelance projects, full-time roles, and interesting collaborations.
+                <br /><br />
+                <a href="mailto:anurag95678@gmail.com" className="hover:text-primary-color transition-colors">anurag95678@gmail.com</a><br />
+                <a href="tel:+919567851175" className="hover:text-primary-color transition-colors">+91 95678 51175</a>
               </p>
             </div>
             <div className="flex flex-col gap-3">

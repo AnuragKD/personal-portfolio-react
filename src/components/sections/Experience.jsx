@@ -1,8 +1,10 @@
+import { useState } from 'react'
 import Container from '../layout/Container'
 import Section from '../layout/Section'
 import SectionBorder from '../element/Sectionborder'
 import Label from '../ui/Label'
 import Card from '../ui/Card'
+import Button from '../ui/Button'
 import AnimateIn from '../element/AnimateIn'
 import experience from '../../data/experience'
 
@@ -34,8 +36,14 @@ const ExperienceCard = ({ exp, isLast, index }) => {
           <Card variant="default" hover={true} className="p-5 group-hover:border-primary-color/20">
             <p className="text-gray-500 text-sm leading-relaxed mb-4 font-[Inter]">{exp.description}</p>
             <ul className="flex flex-col gap-2">
-              {exp.highlights.map((h, i) => (
+              {exp.Highlights?.map((h, i) => (
                 <li key={i} className="flex gap-2 items-start text-sm text-gray-500 font-[Inter]">
+                  <span className="text-primary-color mt-0.5 shrink-0">▸</span>
+                  {h}
+                </li>
+              ))}
+              {exp.highlights?.map((h, i) => (
+                <li key={`lc-${i}`} className="flex gap-2 items-start text-sm text-gray-500 font-[Inter]">
                   <span className="text-primary-color mt-0.5 shrink-0">▸</span>
                   {h}
                 </li>
@@ -49,14 +57,22 @@ const ExperienceCard = ({ exp, isLast, index }) => {
 }
 
 const Experience = () => {
+  const [showAll, setShowAll] = useState(false)
+  const displayedExp = showAll ? experience : experience.slice(0, 2)
+
   return (
-    <Section id="experience" className="h-fit flex items-center">
-      <Container className="z-1 w-full py-16">
-        <AnimateIn variant="fade-down" delay={0} duration={600}>
-          <Label name="experience">Experience</Label>
+    <Section id="experience" className="h-fit flex items-center relative overflow-hidden">
+      
+      {/* Decorative Background Orbs */}
+      <div className="absolute -top-[10%] -left-[10%] w-[50%] h-[50%] rounded-full bg-primary-color/5 blur-[120px] pointer-events-none z-0" />
+      <div className="absolute top-[40%] -right-[10%] w-[30%] h-[40%] rounded-full bg-primary-color/5 blur-[100px] pointer-events-none z-0" />
+
+      <Container className="relative z-10 w-full py-16">
+        <AnimateIn variant="fade-down" delay={0} duration={600} className="flex justify-center">
+          <Label name="experience" className="!mx-0">Experience</Label>
         </AnimateIn>
         <AnimateIn variant="blur-in" delay={80} duration={700}>
-          <h2 className="text-gray-900 text-center mb-3">My Journey</h2>
+          <h2 className="text-gray-900 text-center mb-3 mt-1">My Journey</h2>
         </AnimateIn>
         <AnimateIn variant="fade-up" delay={160} duration={600}>
           <p className="text-gray-500 text-center max-w-xl mx-auto mb-14 text-sm leading-relaxed">
@@ -65,10 +81,20 @@ const Experience = () => {
         </AnimateIn>
 
         <div className="max-w-2xl mx-auto">
-          {experience.map((exp, index) => (
-            <ExperienceCard key={exp.id} exp={exp} isLast={index === experience.length - 1} index={index} />
+          {displayedExp.map((exp, index) => (
+            <ExperienceCard key={exp.id} exp={exp} isLast={index === displayedExp.length - 1} index={index} />
           ))}
         </div>
+
+        {experience.length > 2 && (
+          <AnimateIn variant="fade-up" delay={300} duration={600}>
+            <div className="pt-10 flex justify-center">
+              <Button variant="secondary" onClick={() => setShowAll(!showAll)}>
+                {showAll ? "View Less" : "View All Experience"}
+              </Button>
+            </div>
+          </AnimateIn>
+        )}
       </Container>
       <SectionBorder />
     </Section>

@@ -35,43 +35,21 @@ const socialLinks = [
   },
 ];
 
-const navLinks = [
-  { label: "Home",       id: "home" },
-  { label: "About",      id: "about" },
-  { label: "Experience", id: "experience" },
-  { label: "Projects",   id: "projects" },
-  { label: "Skills",     id: "skills" },
-  { label: "Contact",    id: "contact" },
-];
-
 export default function Footer() {
   return (
-    <footer className="bg-main-bg border-t border-[#87878747]">
+    <footer className="bg-black-bg border-t border-white/10">
       <Container>
         <div className="py-10 flex flex-col md:flex-row items-center md:items-start justify-between gap-8">
           {/* Name / Logo */}
           <div className="flex flex-col items-center md:items-start gap-2">
             <button
               onClick={() => scrollTo("home")}
-              className="font-[BricolageGrotesque] text-xl font-bold text-gray-900 hover:text-primary-color transition-colors duration-200"
+              className="font-[BricolageGrotesque] text-xl font-bold text-white hover:text-primary-color transition-colors duration-200"
             >
               Anurag<span className="text-primary-color">.</span>
             </button>
-            <p className="text-xs text-gray-400 font-[Inter]">Frontend &amp; React Developer</p>
+            <p className="text-xs text-white/50 font-[Inter]">Frontend &amp; React Developer</p>
           </div>
-
-          {/* Nav links */}
-          <nav className="flex flex-wrap justify-center gap-x-5 gap-y-2">
-            {navLinks.map((link) => (
-              <button
-                key={link.label}
-                onClick={() => scrollTo(link.id)}
-                className="text-sm text-gray-500 hover:text-primary-color transition-colors duration-200 font-[Inter]"
-              >
-                {link.label}
-              </button>
-            ))}
-          </nav>
 
           {/* Socials */}
           <div className="flex items-center gap-3">
@@ -82,7 +60,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={link.name}
-                className="w-8 h-8 flex items-center justify-center rounded-full border border-gray-200 text-gray-500 hover:text-primary-color hover:border-primary-color transition-all duration-200"
+                className="w-8 h-8 flex items-center justify-center rounded-full border border-white/15 text-white/50 hover:border-white/30 hover:text-white transition-all duration-200"
               >
                 {link.icon}
               </a>
@@ -91,11 +69,11 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="py-4 border-t border-[#87878747] flex flex-col sm:flex-row items-center justify-between gap-2">
-          <p className="text-xs text-gray-400 font-[Inter]">
+        <div className="py-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-2">
+          <p className="text-xs text-white/50 font-[Inter]">
             © {new Date().getFullYear()} Anurag. All rights reserved.
           </p>
-          <p className="text-xs text-gray-400 font-[Inter]">
+          <p className="text-xs text-white/50 font-[Inter]">
             Built with <span className="text-primary-color">♥</span> using React &amp; Tailwind CSS
           </p>
         </div>

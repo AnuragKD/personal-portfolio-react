@@ -1,28 +1,31 @@
 const experience = [
   {
     id: 1,
-    role: "Frontend Developer",
-    company: "Tech Startup",
-    duration: "Jan 2024 – Present",
+    role: "Solution Developer",
+    company: "Techrish Solutions",
+    duration: "Aug 2024 – Current",
     type: "Full-time",
-    description: "Building responsive UIs with React and Tailwind CSS. Collaborating with designers to translate Figma mockups into pixel-perfect, interactive web components.",
+    description: "Developed and deployed scalable React.js and Next.js applications used by production clients.",
     highlights: [
-      "Developed reusable component library reducing dev time by 30%",
-      "Integrated REST APIs and managed state with React Context",
-      "Improved page performance scores from 60 to 95 on Lighthouse",
+      "Implemented SSR and SSG to improve page load speed and search engine visibility",
+      "Built reusable component architecture reducing future development time",
+      "Integrated REST APIs and GraphQL endpoints for dynamic data-driven features",
+      "Improved page performance and Lighthouse scores through lazy loading and code splitting",
+      "Managed both WordPress and React/Next.js projects across multiple client requirements"
     ],
   },
   {
     id: 2,
-    role: "React Developer Intern",
-    company: "Digital Agency",
-    duration: "Jul 2023 – Dec 2023",
-    type: "Internship",
-    description: "Assisted in building and maintaining client websites. Gained hands-on exposure to production codebases, code reviews, and agile workflows.",
+    role: "BTech – Computer Science and Engineering",
+    company: "University College of Engineering, Idukki",
+    duration: "Aug 2020 – May 2024",
+    type: "Education",
+    description: "Graduated with a focus on computer science fundamentals and modern web development.",
     highlights: [
-      "Contributed to 3 live client projects",
-      "Implemented animated landing pages using CSS & GSAP",
-      "Worked in a team of 5 using GitHub and Jira",
+      "Internship on React - Verdant IT Solutions",
+      "Full Stack Web Development - Acmegrade",
+      "Work Readiness Program - ASAP Kerala in association with KKEM",
+      "Swayam – Joy of Computing Using Python - NPTEL"
     ],
   },
 ];
