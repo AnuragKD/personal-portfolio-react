@@ -28,7 +28,7 @@ const ProjectCard = ({ project, index }) => {
               <div className="absolute inset-0 bg-[radial-gradient(#00000008_1px,transparent_1px)] bg-[size:18px_18px]" />
             </div>
           )}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <div className="absolute inset-0 bg-gradient-to-t from-white/50 via-transparent to-transparent opacity-100 transition-opacity duration-300" />
         </div>
 
         {/* Content */}

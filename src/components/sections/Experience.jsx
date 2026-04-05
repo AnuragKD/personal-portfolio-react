@@ -67,6 +67,16 @@ const Experience = () => {
       <div className="absolute -top-[10%] -left-[10%] w-[50%] h-[50%] rounded-full bg-primary-color/5 blur-[120px] pointer-events-none z-0" />
       <div className="absolute top-[40%] -right-[10%] w-[30%] h-[40%] rounded-full bg-primary-color/5 blur-[100px] pointer-events-none z-0" />
 
+      {/* Dotted radial mask */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 h-full w-full pointer-events-none bg-[radial-gradient(#dbdbdb_1px,transparent_1px)] bg-[size:16px_16px]"
+        style={{
+          WebkitMaskImage: 'radial-gradient(ellipse 60% 60% at 50% 50%, #000 55%, transparent 100%)',
+          maskImage: 'radial-gradient(ellipse 60% 60% at 50% 50%, #000 55%, transparent 100%)'
+        }}
+      />
+
       <Container className="relative z-10 w-full py-16">
         <AnimateIn variant="fade-down" delay={0} duration={600} className="flex justify-center">
           <Label name="experience" className="!mx-0">Experience</Label>

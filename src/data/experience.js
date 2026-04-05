@@ -28,6 +28,20 @@ const experience = [
       "Swayam – Joy of Computing Using Python - NPTEL"
     ],
   },
+  {
+    id: 3,
+    role: "BTech – Computer Science and Engineering",
+    company: "University College of Engineering, Idukki",
+    duration: "Aug 2020 – May 2024",
+    type: "Education",
+    description: "Graduated with a focus on computer science fundamentals and modern web development.",
+    highlights: [
+      "Internship on React - Verdant IT Solutions",
+      "Full Stack Web Development - Acmegrade",
+      "Work Readiness Program - ASAP Kerala in association with KKEM",
+      "Swayam – Joy of Computing Using Python - NPTEL"
+    ],
+  },
 ];
 
 export default experience;

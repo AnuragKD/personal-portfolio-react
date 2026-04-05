@@ -6,7 +6,7 @@ export default function Button({
   ...props
 }) {
   const base =
-    "inline-flex items-center justify-center font-normal text-sm rounded-full border-1 border-gray-300 transition-all duration-200 pointer";
+    "inline-flex items-center justify-center font-normal text-sm rounded-full border-1 border-gray-300 transition-all duration-200 cursor-pointer";
 
   const variants = {
     primary: "bg-white text-gray-700 hover:text-white hover:bg-black ",

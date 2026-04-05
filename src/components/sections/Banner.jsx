@@ -5,6 +5,7 @@ import SectionBorder from '../element/Sectionborder'
 import Button from '../ui/Button'
 import Label from '../ui/Label'
 import AnimateIn from '../element/AnimateIn'
+// import bannerImage from '../../assets/images/banner-image.jpeg';
 
 // ─── Utility ────────────────────────────────────────────────
 const scrollTo = (id) => {
@@ -36,26 +37,28 @@ const HeroBg = () => {
         className="absolute inset-0 w-full h-[120%] bg-cover bg-center origin-top pointer-events-none transition-transform duration-[50ms] ease-linear"
         style={{ 
           backgroundImage: "url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop')",
+          // backgroundImage: `url(${bannerImage})`,
+          // backgroundImage: "url('https://i.pinimg.com/736x/af/e6/af/afe6af961f7bd29459e79af1e6404c21.jpg')",
           transform: `translateY(${offsetY * 0.35}px)`
         }}
       />
-      
+      {/*  */}
       {/* Gradient Color Tint */}
       <div className="absolute inset-0 bg-primary-color/20 mix-blend-color pointer-events-none" />
-      <div className="absolute inset-0 bg-white/75 backdrop-blur-[2px] pointer-events-none" />
+      <div className="absolute inset-0 bg-[#f6f5f3]/75 backdrop-blur-[2px] pointer-events-none" />
       
       {/* Dotted radial mask */}
-      <div
+      {/* <div
         aria-hidden="true"
         className="absolute inset-0 h-full w-full pointer-events-none bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] bg-[size:16px_16px]"
         style={{
           WebkitMaskImage: 'radial-gradient(ellipse 60% 60% at 50% 50%, #000 55%, transparent 100%)',
           maskImage: 'radial-gradient(ellipse 60% 60% at 50% 50%, #000 55%, transparent 100%)'
         }}
-      />
+      /> */}
       
       {/* Bottom fade to match next section */}
-      <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white to-transparent pointer-events-none" />
+      <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#f6f5f3] to-transparent pointer-events-none" />
     </div>
   )
 }
@@ -115,7 +118,7 @@ const HeroScrollHint = () => (
       aria-label="Scroll to About section"
       className="flex flex-col items-center gap-1 text-gray-400 hover:text-primary-color transition-colors duration-200 group"
     >
-      <span className="text-xs font-[Inter] tracking-widest uppercase shadow-sm bg-white/50 px-2 rounded-full backdrop-blur-sm">Scroll</span>
+      <span className="text-xs font-[Inter] tracking-widest uppercase px-2 ">Scroll</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
