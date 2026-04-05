@@ -33,17 +33,17 @@ const socialLinks = [
   },
 ]
 
-const InputField = ({ label, id, type = 'text', placeholder, rows, value, onChange }) => {
+const InputField = ({ label, id, type = 'text', placeholder, rows, value, onChange, required,  }) => {
   const inputClass =
     'w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-700 placeholder-gray-400 outline-none focus:bg-white focus:border-primary-color focus:ring-2 focus:ring-primary-color/15 transition-all duration-200 font-[Inter]'
   return (
     <div className="flex flex-col gap-1.5">
       <label htmlFor={id} className="text-sm font-medium text-gray-700 font-[Inter]">{label}</label>
       {rows ? (
-        <textarea id={id} rows={rows} placeholder={placeholder} value={value} onChange={onChange}
+        <textarea id={id} required={required}  rows={rows} placeholder={placeholder} value={value} onChange={onChange}
           className={`${inputClass} resize-none`} />
       ) : (
-        <input id={id} type={type} placeholder={placeholder} value={value} onChange={onChange}
+        <input id={id} required={required} type={type} placeholder={placeholder} value={value} onChange={onChange}
           className={inputClass} />
       )}
     </div>

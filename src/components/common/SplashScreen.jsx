@@ -56,7 +56,7 @@ export default function SplashScreen({ onDone }) {
         {/* Logo / name */}
         <div className="splash-logo-in flex flex-col items-center gap-3">
           <Icon name="logo" className="h-12 w-auto invert opacity-90" />
-          <div className="flex items-end gap-1">
+          {/* <div className="flex items-end gap-1">
             <span
               className="text-white font-[BricolageGrotesque] font-semibold text-2xl tracking-tight"
               style={{ animationDelay: '150ms' }}
@@ -64,10 +64,10 @@ export default function SplashScreen({ onDone }) {
               Anurag
             </span>
             <span className="text-[#54814F] font-[BricolageGrotesque] font-semibold text-3xl leading-none">.</span>
-          </div>
-          <p className="text-white/30 text-xs font-[Inter] tracking-widest uppercase">
+          </div> */}
+          {/* <p className="text-white/30 text-xs font-[Inter] tracking-widest uppercase">
             Frontend &amp; React Developer
-          </p>
+          </p> */}
         </div>
 
         {/* Loading bar */}
