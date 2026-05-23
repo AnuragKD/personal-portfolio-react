@@ -83,7 +83,7 @@ const HeroHeading = () => (
 const HeroTagline = () => (
   <AnimateIn variant="fade-up" delay={460} duration={700}>
     <p className="mt-5 max-w-lg mx-auto text-gray-500 text-sm md:text-base leading-relaxed font-[Inter]">
-      Frontend Developer with 1+ year of professional experience building scalable web applications using React.js and Next.js.
+      Developer with 2+ year of professional experience building scalable web applications using React.js and Next.js.
     </p>
   </AnimateIn>
 )

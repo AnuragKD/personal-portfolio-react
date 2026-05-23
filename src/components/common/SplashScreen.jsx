@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import Icon from '../Icon'
+import SiteLogo from "../../assets/images/site-logo.png";
 
 /**
  * SplashScreen — full-page animated loader.
@@ -55,19 +56,8 @@ export default function SplashScreen({ onDone }) {
 
         {/* Logo / name */}
         <div className="splash-logo-in flex flex-col items-center gap-3">
-          <Icon name="logo" className="h-12 w-auto invert opacity-90" />
-          {/* <div className="flex items-end gap-1">
-            <span
-              className="text-white font-[BricolageGrotesque] font-semibold text-2xl tracking-tight"
-              style={{ animationDelay: '150ms' }}
-            >
-              Anurag
-            </span>
-            <span className="text-[#54814F] font-[BricolageGrotesque] font-semibold text-3xl leading-none">.</span>
-          </div> */}
-          {/* <p className="text-white/30 text-xs font-[Inter] tracking-widest uppercase">
-            Frontend &amp; React Developer
-          </p> */}
+          {/* <Icon name="logo" className="h-12 w-auto invert opacity-90" /> */}
+          <img src={SiteLogo} alt="Logo" className="h-[100px] lg:h-[140px] w-auto" />          
         </div>
 
         {/* Loading bar */}
@@ -88,12 +78,12 @@ export default function SplashScreen({ onDone }) {
       </div>
 
       {/* Bottom tagline */}
-      <p
+      {/* <p
         className="absolute bottom-8 text-white/20 text-xs font-[Inter] tracking-widest splash-logo-in"
         style={{ animationDelay: '500ms' }}
       >
         Crafting interfaces with code &amp; creativity
-      </p>
+      </p> */}
     </div>
   )
 }

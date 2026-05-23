@@ -66,11 +66,11 @@ const Skills = () => {
         {/* Break out of container to span full viewport width using 100vw trick */}
         <div className="flex flex-col gap-6 relative">
           <AnimateIn variant="fade-left" delay={300} duration={800} className="w-full">
-            <MarqueeRow items={frontendSkills} speed={55} />
+            <MarqueeRow items={frontendSkills} speed={90} />
           </AnimateIn>
           
           <AnimateIn variant="fade-right" delay={400} duration={800} className="w-full">
-            <MarqueeRow items={row2Skills} reverse={true} speed={60} />
+            <MarqueeRow items={row2Skills} reverse={true} speed={90} />
           </AnimateIn>
         </div>
       </Container>

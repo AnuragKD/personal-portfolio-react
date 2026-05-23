@@ -1,4 +1,5 @@
 import Container from "./Container";
+import SiteLogo from "../../assets/images/site-logo.png";
 
 const scrollTo = (id) => {
   const el = document.getElementById(id);
@@ -44,9 +45,13 @@ export default function Footer() {
           <div className="flex flex-col items-center md:items-start gap-2">
             <button
               onClick={() => scrollTo("home")}
-              className="font-[BricolageGrotesque] text-xl font-bold text-white hover:text-primary-color transition-colors duration-200"
+              className="flex items-center flex-col md:flex-row gap-1 md:gap-2 font-[BricolageGrotesque] text-xl font-bold text-white transition-colors duration-200"
             >
-              Anurag<span className="text-primary-color">.</span>
+
+              <img src={SiteLogo} alt="Logo" className="h-[60px] md:h-[34px] lg:h-[60px] w-auto" />
+              <div>
+                Anurag<span className="text-primary-color ml-1">.</span>
+              </div>
             </button>
             <p className="text-xs text-white/50 font-[Inter]">Frontend &amp; React Developer</p>
           </div>

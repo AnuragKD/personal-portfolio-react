@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Icon from "../Icon";
 import Button from "../ui/Button";
+import SiteLogo from "../../assets/images/site-logo.png";
 
 // Anchor links for single-page scroll navigation
 const navLinks = [
@@ -90,7 +91,9 @@ export default function Header() {
             className="focus:outline-none"
             aria-label="Go to top"
           >
-            <Icon name="logo" className="h-[26px] md:h-[30px] lg:h-[35px] w-auto" />
+            {/* <Icon name="logo" className="h-[26px] md:h-[30px] lg:h-[35px] w-auto" /> */}
+            <img src={SiteLogo} alt="Logo" className="h-[34px] lg:h-[46px] w-auto" />
+            
           </button>
 
           {/* Desktop nav */}

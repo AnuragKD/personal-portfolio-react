@@ -28,7 +28,7 @@ const ExperienceCard = ({ exp, isLast, index }) => {
             </div>
             <div className="flex flex-col items-end gap-1.5">
               <span className="text-xs text-gray-400 font-[Inter]">{exp.duration}</span>
-              <span className="text-xs px-2.5 py-0.5 rounded-full bg-primary-color/10 text-primary-color border border-primary-color/20 font-[Inter]">
+              <span className="text-xs px-2.5 py-0.5 rounded-full bg-white text-primary-color border border-primary-color/20 font-[Inter]">
                 {exp.type}
               </span>
             </div>
